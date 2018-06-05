@@ -6,5 +6,10 @@ const fs = require('fs')
 const index = path.join(path.dirname(fs.realpathSync(__filename)), '../index.js')
 const MailDev = require(index)
 
-const maildev = new MailDev()
+const maildev = new MailDev({
+  outgoingHost: 'smtp.gmail.com',
+  outgoingSecure: false,
+  outgoingUser: 'shruthi.bharadwaj@quetzal.com',
+  // outgoingPass: ''
+  })
 maildev.listen()

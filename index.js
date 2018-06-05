@@ -61,6 +61,7 @@ module.exports = function (config) {
       config.outgoingUser ||
       config.outgoingPass ||
       config.outgoingSecure) {
+    console.log('Setting up email relay :: ');
     mailserver.setupOutgoing(
       config.outgoingHost,
       parseInt(config.outgoingPort),
